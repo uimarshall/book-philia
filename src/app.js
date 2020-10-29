@@ -26,3 +26,25 @@ const nextSibling = bookList.nextElementSibling
 console.log(nextSibling);
 const prevSibling = bookList.previousElementSibling
 console.log(prevSibling);
+
+// Delete Event
+// This method is expensive bcos of Event Bubbling
+/**const btns = document.querySelectorAll('#book-list .delete');
+Array.from(btns).forEach((btn)=>{
+    btn.addEventListener('click',(e)=>{
+        const li = e.target.parentElement
+        li.parentNode.removeChild(li)
+    })
+})*/
+
+// Add Event to the parent element to properly use Event Bubbling
+const ul = document.querySelector('#book-list ul');
+
+    ul.addEventListener('click',(e)=>{
+        if (e.target.className == 'delete') {
+            const li = e.target.parentElement;
+            // li.parentNode.removeChild(li) li.parentNode == ul
+            ul.removeChild(li)
+            
+        }   
+    })
