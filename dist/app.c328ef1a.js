@@ -117,20 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"greet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.greet = void 0;
-
-var greet = function greet(greetings, name) {
-  return "".concat(greetings, ", ").concat(name);
-};
-
-exports.greet = greet;
-},{}],"app.js":[function(require,module,exports) {
+})({"app.js":[function(require,module,exports) {
 var books = document.querySelectorAll('#book-list li .name');
 Array.from(books).forEach(function (book) {
   console.log(book.textContent);
@@ -149,17 +136,7 @@ console.log(banner.nodeType); // Cloning a Node
 
 var clonedBanner = banner.cloneNode(true);
 console.log(clonedBanner);
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
-
-var _greet = require("./greet");
-
-var _app = _interopRequireDefault(require("./app"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-document.querySelector('h1').textContent = (0, _greet.greet)('Hi guys', 'Brady');
-},{"./greet":"greet.js","./app":"app.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -363,5 +340,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","app.js"], null)
+//# sourceMappingURL=/app.c328ef1a.js.map
