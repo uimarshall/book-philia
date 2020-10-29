@@ -21,3 +21,8 @@ console.log(banner.nodeType)
 // Cloning a Node
 const clonedBanner = banner.cloneNode(true)
 console.log(clonedBanner);
+const bookList = document.querySelector('#book-list');
+const nextSibling = bookList.nextElementSibling
+console.log(nextSibling);
+const prevSibling = bookList.previousElementSibling
+console.log(prevSibling);

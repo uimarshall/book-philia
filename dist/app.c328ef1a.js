@@ -136,6 +136,11 @@ console.log(banner.nodeType); // Cloning a Node
 
 var clonedBanner = banner.cloneNode(true);
 console.log(clonedBanner);
+var bookList = document.querySelector('#book-list');
+var nextSibling = bookList.nextElementSibling;
+console.log(nextSibling);
+var prevSibling = bookList.previousElementSibling;
+console.log(prevSibling);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

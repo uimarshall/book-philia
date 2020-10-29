@@ -149,6 +149,11 @@ console.log(banner.nodeType); // Cloning a Node
 
 var clonedBanner = banner.cloneNode(true);
 console.log(clonedBanner);
+var bookList = document.querySelector('#book-list');
+var nextSibling = bookList.nextElementSibling;
+console.log(nextSibling);
+var prevSibling = bookList.previousElementSibling;
+console.log(prevSibling);
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
