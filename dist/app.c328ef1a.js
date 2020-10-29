@@ -159,6 +159,30 @@ ul.addEventListener('click', function (e) {
 
     ul.removeChild(li);
   }
+}); //   Add to bookList using forms
+// Get a form with an 'id' of add-book
+
+var addForm = document.forms['add-book'];
+addForm.addEventListener('submit', function (e) {
+  e.preventDefault(); // Get user input
+
+  var value = addForm.querySelector('input[type="text"]').value; // Create elements
+
+  var li = document.createElement('li');
+  var bookName = document.createElement('span');
+  var delBtn = document.createElement('span'); // add content to elements
+
+  delBtn.textContent = 'delete';
+  bookName.textContent = value; // Add class Name to elements
+  // delBtn.setAttribute('class', 'delete')
+
+  bookName.classList.add('name');
+  delBtn.classList.add('delete'); // append to document
+
+  li.appendChild(bookName);
+  li.appendChild(delBtn); // append li to DOM
+
+  ul.appendChild(li);
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

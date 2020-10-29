@@ -48,3 +48,33 @@ const ul = document.querySelector('#book-list ul');
             
         }   
     })
+
+//   Add to bookList using forms
+
+// Get a form with an 'id' of add-book
+const addForm = document.forms['add-book']
+addForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    // Get user input
+    const value = addForm.querySelector('input[type="text"]').value
+
+    // Create elements
+    const li = document.createElement('li')
+    const bookName = document.createElement('span')
+    const delBtn = document.createElement('span')
+
+    // add content to elements
+    delBtn.textContent = 'delete'
+    bookName.textContent = value
+
+    // Add class Name to elements
+    // delBtn.setAttribute('class', 'delete')
+    bookName.classList.add('name')
+    delBtn.classList.add('delete')
+    // append to document
+    li.appendChild(bookName)
+    li.appendChild(delBtn)
+
+    // append li to DOM
+    ul.appendChild(li)
+})
