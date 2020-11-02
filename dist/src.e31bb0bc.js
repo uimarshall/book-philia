@@ -196,6 +196,15 @@ addForm.addEventListener('submit', function (e) {
   li.appendChild(delBtn); // append li to DOM
 
   ul.appendChild(li);
+}); // Hide Books
+
+var hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function () {
+  if (hideBox.checked) {
+    ul.style.display = 'none';
+  } else {
+    ul.style.display = 'initial';
+  }
 });
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -235,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55981" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63948" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

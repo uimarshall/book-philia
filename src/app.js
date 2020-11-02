@@ -78,3 +78,14 @@ addForm.addEventListener('submit',(e)=>{
     // append li to DOM
     ul.appendChild(li)
 })
+
+// Hide Books
+const hideBox = document.querySelector('#hide')
+hideBox.addEventListener('change',()=>{
+    if (hideBox.checked) {
+        ul.style.display = 'none'
+        
+    }else{
+         ul.style.display = 'initial'
+    }
+})
